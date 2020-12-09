@@ -31,7 +31,7 @@ public class Main {
   private static long getNumOfTrees(int[][] data, int right, int down){
     var trees = 0;
     for(var x = down; x < data.length; x += down){
-      trees += data[x][x / down * right % data[0].length];
+      trees += data[x][x / down * right % data[x].length];
     }
 
     return trees;
